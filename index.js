@@ -5,7 +5,7 @@ const authRoute = require('./routes/auth');
 const app = express();
 let Port = 5000;
 dotenv.config();
-app.use(express.json);
+app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 // app.use("/api/auth",authRoute);
 let MONGO_URL = process.env.MONGO_URL;
