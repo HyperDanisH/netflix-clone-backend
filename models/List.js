@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+
+// List means where bunch of movies are stored in array in mongodb 
+
 const ListSchema = new mongoose.Schema({
 
     title: {
@@ -16,4 +19,5 @@ const ListSchema = new mongoose.Schema({
    
 }, { timestamps: true });
 
-module.exports = mongoose.model('List', ListSchema);
+const model =  mongoose.model('List', ListSchema);
+module.exports = model;
